@@ -47,7 +47,6 @@ function init() {
         element.src = `assets/${bugType}`;
 
         element.addEventListener("click", (event) => {
-            howManyLeft--;
             splat(event.target);
         });
         container.appendChild(element);
@@ -66,6 +65,7 @@ let splat = (image) => {
         return;
     }
 
+    howManyLeft--;
     image.setAttribute("src", "assets/splat.png");
 
     let messageSpan = document.querySelector("#message");
